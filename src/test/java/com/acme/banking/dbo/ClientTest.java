@@ -2,17 +2,14 @@ package com.acme.banking.dbo;
 
 import com.acme.banking.dbo.domain.Client;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
-import static org.junit.jupiter.api.Assumptions.*;
-
 
 @DisplayName("Test suite for Client class")
 public class ClientTest {
     private Client client;
+
     @BeforeEach
     public void setUp() {
         client = new Client(1, "John Doe");
