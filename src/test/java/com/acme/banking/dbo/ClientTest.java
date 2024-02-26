@@ -16,7 +16,7 @@ import static org.hamcrest.beans.HasPropertyWithValue.hasProperty;
 
 @DisplayName("Test suite")
 public class ClientTest {
-    @Test @Disabled("temporary disabled")
+    @Test //@Disabled("temporary disabled")
     @DisplayName("Test case")
     public void shouldStorePropertiesWhenCreated() {
         //region given
@@ -31,25 +31,8 @@ public class ClientTest {
 
         //region then
         //Junit5:
-        assertAll("Client store its properties",
-                () -> assertEquals(clientId, sut.getId()),
-                () -> assertEquals(clientName, sut.getName())
-        );
-
-        //Hamcrest:
-        assertThat(sut,
-            allOf(
-                hasProperty("id", notNullValue()),
-                hasProperty("id", equalTo(clientId)),
-                hasProperty("name", is(clientName))
-        ));
-
-        //AssertJ:
-        org.assertj.core.api.Assertions.assertThat(sut)
-                .hasFieldOrPropertyWithValue("id", clientId)
-                .hasFieldOrPropertyWithValue("name", clientName);
-        //also take a look at `extracting()` https://stackoverflow.com/a/51812188
-        //endregion
+        assertEquals(clientId, sut.getId());
+        assertEquals(clientName, sut.getName());
     }
 }
 
