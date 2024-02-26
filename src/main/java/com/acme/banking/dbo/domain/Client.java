@@ -10,7 +10,7 @@ public class Client {
 
     public Client(int id, String name) {
         if (id < 0) {
-            throw new IllegalArgumentException("ID must be a positive integer");
+            throw new IllegalArgumentException("ID must be a positive integer or 0");
         }
         if (name == null || name.trim().isEmpty()) {
             throw new IllegalArgumentException("Name must not be null or empty");
