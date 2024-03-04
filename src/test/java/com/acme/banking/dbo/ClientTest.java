@@ -85,7 +85,7 @@ public class ClientTest {
     // 1. Пытаемся добавить клиенту client валидный аккаунт
     @Test
     @DisplayName("Test case 7 - test_try_add_SavingAccount_when_AccountIsValid_Throw()")
-        public void Add_SA_whenValid() {
+    public void Add_SA_whenValid() {
         assertDoesNotThrow(() -> client.addAccount(validAccount));
     }
 
